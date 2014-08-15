@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+
+  <head>
+    <title>Threesixty Slider</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/bootstrap-responsive.css">
+    <link rel="stylesheet" href="css/theme.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/prism.css">
+    <link rel="stylesheet" href="../styles/threesixty.css">
+
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+    <script type="text/javascript" src="js/modernizr.custom.66977.js"></script>
+  </head>
+
+  <body>
+     
+
+    <section class="container-fluid" id="container">
+      <div class="threesixty product1">
+        <div class="spinner">
+          <span>0%</span>
+        </div>
+        <ol class="threesixty_images"></ol>
+      </div>
+    </section>
+     
+    <script src="js/jquery-1.10.2.min.js"></script>
+    <!-- build:js js/threesixty.min.js -->
+    <script type="text/javascript" src='../src/threesixty.js'></script>
+    <!-- endbuild -->
+    <script type="text/javascript" src="js/prism.js"></script>
+    <script type="text/javascript">
+    window.onload = init;
+
+    var product;
+    function init(){
+
+      product1 = $('.product1').ThreeSixty({
+        totalFrames: 52,
+        endFrame: 30,
+        currentFrame: 1,
+        drag: true,
+        imgList: '.threesixty_images',
+        progress: '.spinner',
+        imagePath:'img/car/',
+        filePrefix: '',
+        ext: '.png',
+        height: 447,
+        width: 1000,
+        navigation: true,
+        disableSpin: false,
+        onReady: function () {
+          //
+        }
+      });
+
+    }
+
+  </script>
+  </body>
+
+</html>
